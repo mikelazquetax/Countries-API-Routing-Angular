@@ -1,0 +1,35 @@
+.list{
+    list-style:none;
+    margin:2%;
+    padding: 2%;
+    
+}
+.list-item{
+    padding-inline: 2%;
+    margin:2%;
+    border: 3px solid blue;
+    display: flex;
+    background-color: #242454;
+    color: white;
+    font-weight: bolder;
+    &:hover{
+        background-color: gold;
+        color: black;
+        cursor: pointer;
+    }
+
+    .bandera{
+       
+        img{
+            height: 60%;
+            width: 30%;
+            margin-left: 5%;
+            margin-top: 4%;
+       
+        }
+    }
+  
+
+}
+
+

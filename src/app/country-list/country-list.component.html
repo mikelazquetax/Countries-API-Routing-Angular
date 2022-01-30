@@ -1,0 +1,14 @@
+
+<ul class="list">
+    <li class="list-item" *ngFor="let country of countryList">
+       
+        <div class="textos">
+        <p>Nombre:{{country.name}}</p>
+        <p>Region: {{country.region}}</p>
+        </div>
+        <div class="bandera">
+        <img src="{{country.flags}}" alt="{{country.name}}">
+       
+    </div>
+    </li>
+</ul>
