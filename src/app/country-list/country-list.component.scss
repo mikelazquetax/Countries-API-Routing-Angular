@@ -12,10 +12,12 @@
     background-color: #242454;
     color: white;
     font-weight: bolder;
+    
     &:hover{
         background-color: gold;
         color: black;
         cursor: pointer;
+         transform: scale(1.05) 
     }
 
     .bandera{

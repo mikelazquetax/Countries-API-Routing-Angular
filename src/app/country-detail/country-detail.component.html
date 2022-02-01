@@ -1,0 +1,8 @@
+
+<!-- <button >Go Back To Country List > -->
+
+    <button [routerLink]="['..']">Go Back To Country List </button>
+    <div *ngIf="countryDetail">
+    <p>Nombre: {{countryName}}</p>
+    <p>Location: {{countryDetail.maps.googleMaps}}</p>
+    </div>

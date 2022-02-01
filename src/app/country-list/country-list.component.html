@@ -1,6 +1,6 @@
 
 <ul class="list">
-    <li class="list-item" *ngFor="let country of countryList">
+    <li id={{country.id}} class="list-item" *ngFor="let country of countryList"  [routerLink]="['/country-list/' , country.name]">
        
         <div class="textos">
         <p>Nombre:{{country.name}}</p>
