@@ -1,15 +1,37 @@
+.buscador{
+    
+    margin-top: 2%;
+    text-align: center;
+    padding: 1%;
+    
+   .buscador_label{
+       margin-right: 1%;
+       font-size: large;
+       font-weight: bold;
+   }
+   input{
+    padding: 1%;
+    border-width: 7px;
+    border-radius: 10%;
+    &:hover{
+        border-color: gold;
+    }
+   }
+}
+
 .list{
     list-style:none;
-    margin:2%;
+    margin:.5%;
     padding: 2%;
     
 }
 .list-item{
     padding-inline: 2%;
     margin:2%;
-    border: 3px solid blue;
+    border: 3px solid;
     display: flex;
     background-color: #242454;
+    opacity: 0.9;
     color: white;
     font-weight: bolder;
     
@@ -23,6 +45,7 @@
     .bandera{
        
         img{
+            
             height: 60%;
             width: 30%;
             margin-left: 5%;

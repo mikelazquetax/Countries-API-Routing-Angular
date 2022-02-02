@@ -11,7 +11,19 @@ import { Countrydetail } from '../models/countryDetail.models';
 })
 export class CountryDetailComponent implements OnInit {
  public countryName?: string;
- public countryDetail: Countrydetail
+ public countryDetail: Countrydetail;
+
+ public position = {
+   lat: -34.681,
+   lng:  -58.371
+ };
+ public label = {
+   color: 'black',
+   weight: 'bold',
+   text: 'Capital',
+   
+ }
+
   constructor(private route: ActivatedRoute, private CountryDetailService: CountryDetailService ) { }
 
   ngOnInit(): void {
@@ -32,7 +44,8 @@ export class CountryDetailComponent implements OnInit {
       debugger
       
       this.countryDetail = res[0]
-    
+      this.position.lat = res[0].capitalInfo.latlng[0]
+      this.position.lng = res[0].capitalInfo.latlng[1]
     })
   }
 

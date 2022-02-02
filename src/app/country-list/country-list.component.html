@@ -1,10 +1,13 @@
-
+<div class="buscador" >
+    <label class="buscador_label" for="busc">Buscar Pais</label>
+    <input type="text" name="buscador" id="buscador"  (keyup)="onKeyUp($event)"  placeholder="Enter name">
+</div>
 <ul class="list">
     <li id={{country.id}} class="list-item" *ngFor="let country of countryList"  [routerLink]="['/country-list/' , country.name]">
        
         <div class="textos">
-        <p>Nombre:{{country.name}}</p>
-        <p>Region: {{country.region}}</p>
+        <p>Nombre:      {{country.name}}</p>
+        <p>Region:      {{country.region}}</p>
         </div>
         <div class="bandera">
         <img src="{{country.flags}}" alt="{{country.name}}">

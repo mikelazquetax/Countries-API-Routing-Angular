@@ -1,8 +1,15 @@
 
 <!-- <button >Go Back To Country List > -->
-
-    <button [routerLink]="['..']">Go Back To Country List </button>
-    <div *ngIf="countryDetail">
+    <div class="volver">
+    <button class="buttonVolver" [routerLink]="['..']">Go Back To Country List </button>
+</div>
+    <div class='detalles' *ngIf="countryDetail">
     <p>Nombre: {{countryName}}</p>
-    <p>Location: {{countryDetail.maps.googleMaps}}</p>
-    </div>
+    <p>Population: {{countryDetail.population}}</p>
+    <p>Capital: {{countryDetail.capital}}</p>
+    <div class="mapa">
+    <google-map  [zoom]="4" [center]="position">
+        <map-marker  [position]="position" [label]="label"></map-marker>
+    </google-map>
+</div>
+</div>

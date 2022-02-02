@@ -9,4 +9,7 @@ export interface Countrydetail{
     googleMaps: string,
     
  }
+ capitalInfo:{
+   latlng:string[]
+ }
 }

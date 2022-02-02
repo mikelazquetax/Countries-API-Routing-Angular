@@ -10,12 +10,14 @@ import { take } from 'rxjs';
 })
 export class CountryListComponent implements OnInit {
  public countryList: Country[];
+ public secCountryList: Country[];
  public itemNumber: any;
  public countryName: string
   constructor(private CountryListService: CountryListService) { }
 
   ngOnInit(): void {
     this.countryList = []
+    this.secCountryList = []
     this.getAllCountries()
     console.log('inicializando')
   }
@@ -27,7 +29,10 @@ export class CountryListComponent implements OnInit {
       for(let i = 0 ; i < res.length; i++){
        
         this.countryList.push(res[i])
-        this.countryList[i].name = res[i].name.common
+        this.secCountryList.push(res[i])
+        
+      
+        this.countryList[i].name = res[i].name.common.toUpperCase()
         this.countryList[i].flags = res[i].flags.png
         this.countryList[i].id = i
       }
@@ -35,7 +40,19 @@ export class CountryListComponent implements OnInit {
     })
   }
 
+  onKeyUp(x:any){
+    this.countryList = this.secCountryList
+
   
+    let valorCampo:string = x.target.value.toUpperCase()
+
+    
+    const countryFiltrado = this.countryList.filter((item)=>{
+    return  item.name.includes(valorCampo)
+    }) 
+    console.log(countryFiltrado)
+    this.countryList = countryFiltrado
+  }
 
 
 }
