@@ -42,8 +42,15 @@ export class CountryDetailComponent implements OnInit {
     this.CountryDetailService.getSpecificCountry(country).subscribe((res:any)=>{
       console.log(res)
       debugger
+
+      function numberWithCommas(x:any) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
       
       this.countryDetail = res[0]
+     let x = this.countryDetail.population
+      this.countryDetail.population = numberWithCommas(x)
       this.position.lat = res[0].capitalInfo.latlng[0]
       this.position.lng = res[0].capitalInfo.latlng[1]
     })
