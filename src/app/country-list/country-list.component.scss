@@ -14,7 +14,8 @@
     border-width: 7px;
     border-radius: 10%;
     &:hover{
-        border-color: gold;
+        border-color: rgba(23,185,120,255);
+        cursor: pointer;
     }
    }
 }
@@ -36,7 +37,7 @@
     font-weight: bolder;
     
     &:hover{
-        background-color: gold;
+        background-color: rgba(23,185,120,255);
         color: black;
         cursor: pointer;
          transform: scale(1.05) 
@@ -65,7 +66,7 @@
     margin-top:2%;
  
  .buttonContact{
-    background-color: blue;
+    background-color: rgba(23,185,120,255);
     color:white;
     font-weight: bold;
     padding: 1%;
