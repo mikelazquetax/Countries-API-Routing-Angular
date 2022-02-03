@@ -1,0 +1,19 @@
+
+<div *ngIf="destinationPop">
+<div>
+    <div class="title">
+        <p>Where Do You Want To Go?</p>
+    </div>
+    <div class="formulario">
+    <p>Country:</p>
+      <select  [(ngModel)]="selCountry"  name="countries" id="countries">
+          <option value="{{country.name}}" *ngFor="let country of listado">{{country.name}}</option>
+      </select>
+      <p>City:</p>
+      <input type="text" [(ngModel)]="city">
+    </div>
+    <div class="botonSend">
+        <button (click)="saveAction($event)">SEND</button>
+    </div>
+</div>
+</div>

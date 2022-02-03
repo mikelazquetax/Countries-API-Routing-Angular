@@ -58,3 +58,21 @@
 }
 
 
+.contact{
+    display: flex;
+    justify-content: center;
+
+    margin-top:2%;
+ 
+ .buttonContact{
+    background-color: blue;
+    color:white;
+    font-weight: bold;
+    padding: 1%;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+ }
+ 
+}

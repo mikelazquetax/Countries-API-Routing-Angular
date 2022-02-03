@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,17 +9,22 @@ import { CountryListComponent } from './country-list/country-list.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { DestinationComponent } from './destination/destination.component';
 @NgModule({
   declarations: [
     AppComponent,
     CountryListComponent,
     CountryDetailComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ContactUsComponent,
+    DestinationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     GoogleMapsModule
   ],
   providers: [],

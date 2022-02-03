@@ -1,0 +1,47 @@
+.title{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold ;
+}
+
+.formulario{
+    text-align: center;
+    margin-inline: 1%;
+    select{
+        margin-right: 2%;
+        text-align: center;
+        padding: 0.1%;
+        border-width: 7px;
+        border-radius: 10%;
+        &:hover{
+            border-color: gold;
+        }
+    }
+    input{
+        text-align: center;
+        padding: 0.1%;
+        border-width: 7px;
+        border-radius: 10%;
+        &:hover{
+            border-color: gold;
+        }
+        
+    }
+}
+
+.botonSend{
+    display: flex;
+    justify-content: center;
+    margin-top:2%;
+button{
+    background-color: blue;
+    color:white;
+    font-weight: bold;
+    padding: 1%;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+}
